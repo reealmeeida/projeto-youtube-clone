@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>YouTube Clone</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<script>
+  function toggleDescription() {
+  const descBox = document.getElementById('video-description');
+  const btn = descBox.querySelector('.toggle-description');
+
+  descBox.classList.toggle('collapsed');
+
+  if (descBox.classList.contains('collapsed')) {
+    btn.textContent = 'Mostrar mais';
+  } else {
+    btn.textContent = 'Mostrar menos';
+  }
+}
+
+
+  // Começa colapsado
+  document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('video-description').classList.add('collapsed');
+  });
+</script>
+
+
+<body>
+  <header>
+    <div class="logo">
+  <img src="images/Left.png" alt="YouTube Logo" class="Left-img" />
+</div>
+
+
+
+    <div class="search-container">
+      <input type="text" placeholder="Pesquisar" class="search-bar" />
+      <span class="material-icons">search</span>
+    </div>
+    <div class="user-icons">
+  <img src="images/Video.png" alt="Criar vídeo" class="user-icon" />
+  <img src="images/Bell.png" alt="Notificações" class="user-icon" />
+  <img src="images/Renan.jpg" alt="Minha foto de perfil" class="profile-photo" />
+</div>
+
+  </header>
+
+  <div class="container">
+    <nav class="sidebar">
+      <a href="#"><span class="material-icons">home</span> Início</a>
+      <a href="#"><span class="material-icons">explore</span> Explorar</a>
+      <a href="#"><span class="material-icons">subscriptions</span> Inscrições</a>
+      <a href="#"><span class="material-icons">video_library</span> Biblioteca</a>
+    </nav>
+
+    <!-- MAIN atualizado -->
+    <main class="watch-page">
+      <div class="video-player">
+        <div class="iframe-container">
+          <iframe
+  src="https://www.youtube.com/embed/zs_zpMnwNMs?list=RDzs_zpMnwNMs"
+  frameborder="0"
+  allowfullscreen
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+></iframe>
+
+        </div>
+        <h2>Rap do Itachi (Naruto) - ESSA DOR QUE CAUSEI... | NERD HITS</h2>
+        <!-- Canal e botão de inscrição -->
+<div class="channel-info">
+  <div class="channel-left">
+    <img src="images/7minutoz.jpg" alt="Avatar do canal" class="channel-avatar" />
+    <div class="channel-details">
+      <h4 class="channel-name"><strong>7 Minutoz</strong></h4>
+      <p class="subscriber-count">1,5 mi de inscritos</p>
+    </div>
+    <button class="subscribe-btn">Inscreva-se</button>
+  </div>
+
+  <div class="video-actions">
+    <button class="action-btn">
+      <span class="material-icons">thumb_up</span>
+      <span>12 mil</span>
+    </button>
+    <button class="action-btn">
+      <span class="material-icons">thumb_down</span>
+      <span>Não gostei</span>
+    </button>
+    <button class="action-btn">
+      <span class="material-icons">share</span>
+      <span>Compartilhar</span>
+    </button>
+    <button class="action-btn">
+      <span class="material-icons">playlist_add</span>
+      <span>Salvar</span>
+    </button>
+  </div>
+</div>
+
+
+<!-- Descrição do vídeo -->
+<div class="video-description collapsed" id="video-description">
+  <strong>1.2M visualizações • há 1 ano</strong><br/>
+<p>RAP do mais foda, Itachi Uchiha 🐦‍⬛</p>
+<p>Aquele que sacrificou tudo por Konoha. 🔥</p>
+  <span class="toggle-description" onclick="toggleDescription()">Mostrar mais</span>
+</div>
+
+
+<!-- Comentários -->
+<div class="comments-section">
+  <h3>10.437 Comentários</h3>
+
+  <!-- Campo para comentar -->
+  <div class="comment-box">
+    <img src="images/Renan.jpg" alt="Seu avatar" class="comment-avatar" />
+    <input type="text" placeholder="Adicione um comentário..." />
+  </div>
+
+  <!-- Comentários fictícios -->
+  <div class="comment">
+    <img src="images/Suellen.jpg" alt="Avatar usuário" class="comment-avatar" />
+    <div class="comment-content">
+      <h4>Suellen P.</h4>
+      <p>Esse rap me arrepia toda vez! Itachi é lendário 🔥</p>
+      <div class="comment-actions">
+      <button class="action-btn">
+        <span class="material-icons">thumb_up</span>
+        20K
+      </button>
+      <button class="action-btn">
+        <span class="material-icons">thumb_down</span>
+      </button>
+      <button class="reply-btn">Responder</button>
+    </div>
+    </div>
+  </div>
+
+  <div class="comment">
+    <img src="images/Arthur.jpg" alt="Avatar usuário" class="comment-avatar" />
+    <div class="comment-content">
+      <h4>Arthur G.</h4>
+      <p>Voltei aqui só pra ouvir de novo. Essa música é arte!</p>
+      <div class="comment-actions">
+      <button class="action-btn">
+        <span class="material-icons">thumb_up</span>
+        9.5K
+      </button>
+      <button class="action-btn">
+        <span class="material-icons">thumb_down</span>
+      </button>
+      <button class="reply-btn">Responder</button>
+    </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+
+      <!-- Agora o aside está DENTRO do main -->
+     <aside class="video-suggestions">
+  <div class="suggestion-card">
+<img src="images/Itachi.webp" alt="Itachi Uchiha" />    <div>
+      <h4>Melhores Momentos do Itachi</h4>
+      <p>Canal Anime Hits</p>
+      <p>2.5M visualizações</p>
+    </div>
+  </div>
+  <div class="suggestion-card">
+    <img src="images/Naruto.jpg" alt="Naruto Uzumaki" />
+    <div>
+      <h4>História do Naruto</h4>
+      <p>Otaku World</p>
+      <p>3M visualizações</p>
+    </div>
+  </div>
+  <div class="suggestion-card">
+  <img src="images/Sharingan.jpg" alt="Sharingan" />
+  <div>
+    <h4>Segredos do Sharingan</h4>
+    <p>Curiosidades Ninja</p>
+    <p>1.8M visualizações</p>
+  </div>
+</div>
+
+</aside>
+
+    </main>
+  </div>
+</body>
+</html>
